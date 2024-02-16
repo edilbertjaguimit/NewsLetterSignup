@@ -38,14 +38,14 @@ main {
   display: flex;
   flex-direction: column;
   /* gap: 25px; */
-  padding: 0 50px 0 20px;
+  padding: 0 60px 0 40px;
 }
 .card-body > p {
-  font-size: 1rem;
+  font-size: .9rem;
   margin-top: 25px;
 }
 .offers {
-  margin-top: 25px;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -53,16 +53,16 @@ main {
 .offer {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
 }
 .offer > img {
   width: 1.2rem;
 }
 .offer > p {
-  font-size: 1rem;
+  font-size: .9rem;
 }
 h2 {
-  font-size: 3.2rem;
+  font-size: 3.3rem;
 }
 input[type="text"] {
   width: 100%;
@@ -100,7 +100,7 @@ input[type="button"]:hover {
   box-shadow: 0 10px 20px 0 rgba(255, 89, 104, 0.5);
 }
 .action {
-  margin-top: 35px;
+  margin-top: 40px;
 }
 .invalid-email {
   border: 1px solid #fdb0aa !important;
