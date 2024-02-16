@@ -17,260 +17,15 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-
+    <link rel="stylesheet" href="style.css" />
     <title>
       Frontend Mentor | Newsletter sign-up form with success message
     </title>
-
-    <style>
-      * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        font-family: "Roboto", sans-serif;
-        /* font-weight: 700;
-  font-style: normal; */
-      }
-
-      /* body {
-        overflow: hidden;
-      } */
-      .container {
-        background: #36384d;
-        height: 100dvh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .card {
-        background: #ffffff;
-        padding: 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: row-reverse;
-        max-width: 43.75rem;
-        height: 28.125rem;
-        box-shadow: 0 1px 20px rgba(0, 0, 0, 0.5);
-        border-radius: 15px;
-      }
-      .card > img {
-        /* width: 100%; */
-        /* height: 100%; */
-        width: 280px;
-        object-fit: cover;
-      }
-      .card-body {
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-        padding: 0 50px 0 20px;
-      }
-      .offers {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-      }
-      .offer {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-      }
-      .offer > img {
-        width: 14px;
-      }
-      .offer > p {
-        font-size: 14px;
-      }
-      h2 {
-        font-size: 45px;
-      }
-      input[type="text"] {
-        width: 100%;
-        padding: 12px 15px;
-        border-radius: 5px;
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        margin-top: 5px;
-        outline: none;
-        transition: ease 0.2s;
-      }
-      input[type="text"]:focus {
-        border: 1px solid #4d4b55;
-      }
-      .email p {
-        font-size: 11px;
-        font-weight: bold;
-      }
-      input[type="button"] {
-        width: 100%;
-        padding: 12px 15px;
-        border-radius: 5px;
-        border: none;
-        margin-top: 5px;
-        color: #ffffff;
-        background: #232742;
-        margin-top: 20px;
-        cursor: pointer;
-        /* transition: all 500ms ease-in-out; */
-        transition: ease 0.2s;
-      }
-      input[type="button"]:hover {
-        background-image: linear-gradient(45deg, #ff5968, #ff6a3a) !important;
-        box-shadow: 0 10px 20px 0 rgba(255, 89, 104, 0.5);
-      }
-      .invalid-email {
-        border: 1px solid #fdb0aa !important;
-        background: #ffe8e6 !important;
-      }
-      .message {
-        display: flex;
-        justify-content: space-between;
-      }
-      .invalid-message {
-        color: #ff5968;
-        display: block !important;
-      }
-      .success-message {
-        background-image: linear-gradient(45deg, #ff5968, #ff6a3a) !important;
-        box-shadow: 0 10px 20px 0 rgba(255, 89, 104, 0.5);
-      }
-      .card-success {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        padding: 30px;
-        background: #ffffff;
-        box-shadow: 0 1px 20px rgba(0, 0, 0, 0.5);
-        border-radius: 15px;
-        width: 350px;
-      }
-      .card-success > img {
-        width: 50px;
-      }
-      .card-success > h1 {
-        font-size: 40px;
-      }
-      .card-success > p {
-        font-size: 13px;
-      }
-      .email-success {
-        font-weight: bold;
-      }
-      .card-none {
-        display: none !important;
-      }
-      #cardMobile {
-        display: none;
-      }
-      /* @media (max-width: 768px) */
-      @media (max-width: 600px) {
-        #cardDesktop {
-          display: none;
-        }
-        #cardMobile {
-          display: block;
-        }
-        .card-mobile {
-          display: flex;
-          flex-direction: column;
-          padding: 0;
-          border-radius: 0;
-          width: 100%;
-          height: 100dvh;
-          background-color: #ffffff;
-        }
-        .card-mobile > img {
-          width: 100%;
-        }
-        .card-body > p {
-          font-size: 18px;
-        }
-        .card-body {
-          /* display: flex;
-          flex-direction: column; */
-          justify-content: space-between;
-          height: 100%;
-          gap: 25px;
-          padding: 50px 30px;
-        }
-
-        .offer {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-        }
-        .offer > img {
-          align-self: flex-start;
-          width: 25px;
-        }
-        .offer > p {
-          font-size: 18px;
-        }
-        h2 {
-          font-size: 45px;
-        }
-        input[type="text"] {
-          width: 100%;
-          padding: 20px 25px;
-          font-size: 18px;
-          border-radius: 5px;
-          border: 1px solid rgba(0, 0, 0, 0.1);
-          margin-top: 15px;
-          outline: none;
-          transition: ease 0.2s;
-        }
-        input[type="text"]:focus {
-          border: 1px solid #4d4b55;
-        }
-        .email p {
-          font-size: 16px;
-          font-weight: bold;
-        }
-        input[type="button"] {
-          width: 100%;
-          padding: 20px 25px;
-          border-radius: 5px;
-          border: none;
-          font-size: 18px;
-          margin-top: 5px;
-          color: #ffffff;
-          background: #232742;
-          margin-top: 20px;
-          cursor: pointer;
-          /* transition: all 500ms ease-in-out; */
-          transition: ease 0.2s;
-        }
-
-        /* card success mobile */
-        .card-mobile-success {
-          display: flex;
-          justify-content: space-between;
-          flex-direction: column;
-          padding: 100px 20px 40px 20px;
-          background: #ffffff;
-          box-shadow: 0 1px 20px rgba(0, 0, 0, 0.5);
-          border-radius: 15px;
-          width: 100%;
-          height: 100dvh;
-        }
-        .mobile-success-message > img {
-          width: 80px;
-        }
-        .mobile-success-message > h1 {
-          font-size: 45px;
-          margin-top: 40px;
-        }
-        .mobile-success-message > p {
-          font-size: 20px;
-          margin-top: 40px;
-        }
-      }
-    </style>
   </head>
   <body>
-    <div class="container">
+    <main>
       <!-- Desktop Sign-up form start -->
-      <div id="cardDesktop">
+      <section id="cardDesktop">
         <div class="card" id="cardSubscribe">
           <img src="assets/images/illustration-sign-up-desktop.svg" alt="" />
           <div class="card-body">
@@ -330,11 +85,11 @@
             style="margin-top: 0"
           />
         </div>
-      </div>
+      </section>
       <!-- Desktop Success message end -->
 
       <!-- Mobile start -->
-      <div id="cardMobile">
+      <section id="cardMobile">
         <div class="card-mobile" id="cardMobileSubscribe">
           <img src="assets/images/illustration-sign-up-mobile.svg" alt="" />
           <div class="card-body">
@@ -381,8 +136,8 @@
         <div class="card-mobile-success card-none" id="cardSuccess1">
           <div class="mobile-success-message">
             <img src="assets/images/icon-list.svg" alt="" />
-          <h1>Thanks for subscribing!</h1>
-          <p id="confirmationMessageEmail1"></p>
+            <h1>Thanks for subscribing!</h1>
+            <p id="confirmationMessageEmail1"></p>
           </div>
           <input
             type="button"
@@ -392,115 +147,9 @@
             style="margin-top: 0"
           />
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
 
-    <script>
-      const txtEmail = document.querySelector("#txtEmail");
-      const txtEmail1 = document.querySelector("#txtEmail1");
-      const btnSubscribe = document.querySelector("#btnSubscribe");
-      const btnSubscribe1 = document.querySelector("#btnSubscribe1");
-      const invalidMessage = document.querySelector("#invalidMessage");
-      const invalidMessage1 = document.querySelector("#invalidMessage1");
-      const confirmationMessageEmail = document.querySelector(
-        "#confirmationMessageEmail"
-      );
-      const confirmationMessageEmail1 = document.querySelector(
-        "#confirmationMessageEmail1"
-      );
-      const cardSubscribe = document.querySelector("#cardSubscribe");
-      const cardMobileSubscribe = document.querySelector("#cardMobileSubscribe");
-      const btnDismissMessage = document.querySelector("#btnDismissMessage");
-      const btnDismissMessage1 = document.querySelector("#btnDismissMessage1");
-      const cardSuccess = document.querySelector("#cardSuccess");
-      const cardSuccess1 = document.querySelector("#cardSuccess1");
-
-      // Desktop
-      btnSubscribe.addEventListener("click", () => {
-        if (txtEmail.value.trim() !== "") {
-          if (!isEmail(txtEmail.value)) {
-            txtEmail.classList.add("invalid-email");
-            invalidMessage.classList.add("invalid-message");
-          } else {
-            const message = `A confirmation email has been sent to <span class="email-success">${txtEmail.value}</span>. Please open it and click the button inside to confirm your subscription.`;
-            txtEmail.classList.remove("invalid-email");
-            invalidMessage.classList.remove("invalid-message");
-            cardSubscribe.classList.add("card-none");
-            cardSuccess.classList.remove("card-none");
-            confirmationMessageEmail.innerHTML = message;
-            txtEmail.value = "";
-          }
-        }
-      });
-
-      btnDismissMessage.addEventListener("click", () => {
-        cardSuccess.classList.add("card-none");
-        cardSubscribe.classList.remove("card-none");
-      });
-
-      const isEmail = (email) => {
-        return /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(
-          email
-        );
-        // return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-      };
-
-      txtEmail.addEventListener("input", () => {
-        if (txtEmail.value.trim() !== "") {
-          if (!isEmail(txtEmail.value)) {
-            txtEmail.classList.add("invalid-email");
-            invalidMessage.classList.add("invalid-message");
-            // btnSubscribe.classList.remove('success-message');
-          } else {
-            txtEmail.classList.remove("invalid-email");
-            invalidMessage.classList.remove("invalid-message");
-            // btnSubscribe.classList.add('success-message');
-          }
-        } else {
-          txtEmail.classList.remove("invalid-email");
-          invalidMessage.classList.remove("invalid-message");
-        }
-      });
-
-      // Mobile
-      btnSubscribe1.addEventListener("click", () => {
-        if (txtEmail1.value.trim() !== "") {
-          if (!isEmail(txtEmail1.value)) {
-            txtEmail1.classList.add("invalid-email");
-            invalidMessage1.classList.add("invalid-message");
-          } else {
-            const message = `A confirmation email has been sent to <span class="email-success">${txtEmail1.value}</span>. Please open it and click the button inside to confirm your subscription.`;
-            txtEmail1.classList.remove("invalid-email");
-            invalidMessage1.classList.remove("invalid-message");
-            cardMobileSubscribe.classList.add("card-none");
-            cardSuccess1.classList.remove("card-none");
-            confirmationMessageEmail1.innerHTML = message;
-            txtEmail1.value = "";
-          }
-        }
-      });
-
-      btnDismissMessage1.addEventListener("click", () => {
-        cardSuccess1.classList.add("card-none");
-        cardMobileSubscribe.classList.remove("card-none");
-      });
-
-      txtEmail1.addEventListener("input", () => {
-        if (txtEmail1.value.trim() !== "") {
-          if (!isEmail(txtEmail1.value)) {
-            txtEmail1.classList.add("invalid-email");
-            invalidMessage1.classList.add("invalid-message");
-            // btnSubscribe.classList.remove('success-message');
-          } else {
-            txtEmail1.classList.remove("invalid-email");
-            invalidMessage1.classList.remove("invalid-message");
-            // btnSubscribe.classList.add('success-message');
-          }
-        } else {
-          txtEmail1.classList.remove("invalid-email");
-          invalidMessage1.classList.remove("invalid-message");
-        }
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
