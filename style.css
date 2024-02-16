@@ -26,7 +26,7 @@ main {
   justify-content: space-between;
   align-items: center;
   flex-direction: row-reverse;
-  max-width: 55rem;
+  max-width: 56rem;
   box-shadow: 0 1px 20px rgba(0, 0, 0, 0.5);
   border-radius: 15px;
 }
@@ -41,11 +41,11 @@ main {
   padding: 0 60px 0 40px;
 }
 .card-body > p {
-  font-size: .9rem;
+  font-size: 1rem;
   margin-top: 25px;
 }
 .offers {
-  margin-top: 30px;
+  margin-top: 35px;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -59,10 +59,10 @@ main {
   width: 1.2rem;
 }
 .offer > p {
-  font-size: .9rem;
+  font-size: 1rem;
 }
 h2 {
-  font-size: 3.3rem;
+  font-size: 3.4rem;
 }
 input[type="text"] {
   width: 100%;
